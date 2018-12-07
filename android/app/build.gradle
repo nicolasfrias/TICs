@@ -99,7 +99,7 @@ android {
 
     defaultConfig {
         applicationId "com.smart"
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 19
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -137,6 +137,23 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-toast')
+    compile project(':react-native-gesture-handler')
+    compile project(':react-native-bluetooth-serial')
+    compile project(':react-native-ble-manager')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-bluetooth-serial')
+    implementation project(':react-native-ble-manager')
+    implementation project(':react-native-bluetooth-serial')
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-ble-manager')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-ble-manager')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

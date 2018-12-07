@@ -3,7 +3,11 @@ package com.smart;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.remobile.toast.RCTToastPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.rusel.RCTBluetoothSerial.RCTBluetoothSerialPackage;
+import it.innove.BleManagerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -24,7 +28,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNGestureHandlerPackage()
+            new RCTToastPackage(),
+            new VectorIconsPackage(),
+            new RNGestureHandlerPackage(),
+            new RCTBluetoothSerialPackage(),
+            new BleManagerPackage()
       );
     }
 
@@ -44,4 +52,5 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
   }
+
 }

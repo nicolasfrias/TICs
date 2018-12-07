@@ -3,20 +3,21 @@ import { StyleSheet, Text, View, ImageBackground, TouchableOpacity} from 'react-
 import React, {Component} from 'react';
 
 
+import Sensores from './Sensores'
 
-type Props = {};
 class Home extends Component<Props> {
   render() {
+
     return (
       <View style={styles.container}>
-        <ImageBackground source={require('/home/nico/Documentos/smart/images/running.jpg')} 
+        <ImageBackground source={require('./images/running.jpg')} 
         style={{width: '100%', height: '100%'}} >
 
           <Text style={styles.text}>SmarT-shirt</Text>
 
        <TouchableOpacity
          style={styles.button1}
-         onPress={this.onPress}
+         onPress={() => this.props.navigation.navigate('Sensores')}
        >
          <Text> Iniciar </Text>
 
@@ -26,7 +27,6 @@ class Home extends Component<Props> {
     );
   }
 }
-
 const styles = StyleSheet.create({
 
   text:{
@@ -48,5 +48,7 @@ const styles = StyleSheet.create({
     width: 300,
     height: 50,
   }
-});
-export default Home;
+
+
+
+export default Home
